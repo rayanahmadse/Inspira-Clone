@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import '../styles/theme.css'
 import '../styles/Login.css'
 
-export default function Login() {
+export default function Register() {
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -11,24 +12,32 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!email || !password) {
-      setError('Please fill in both fields.')
+    if (!name || !email || !password) {
+      setError('Please fill in all fields.')
       return
     }
-    // No backend yet — just simulate a login
     setError('')
-    console.log('Login attempt:', { email, password })
-    navigate('/')
+    console.log('Register attempt:', { name, email, password })
+    navigate('/login')
   }
 
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <h1>Login</h1>
-        <p className="auth-subtitle">Welcome back, please sign in.</p>
+        <h1>Create Account</h1>
+        <p className="auth-subtitle">Join us and start shopping.</p>
 
         <form onSubmit={handleSubmit} className="auth-form">
           {error && <p className="auth-error">{error}</p>}
+
+          <label htmlFor="name">Full Name</label>
+          <input
+            id="name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="John Doe"
+          />
 
           <label htmlFor="email">Email</label>
           <input
@@ -48,11 +57,11 @@ export default function Login() {
             placeholder="••••••••"
           />
 
-          <button type="submit" className="auth-btn">Login</button>
+          <button type="submit" className="auth-btn">Register</button>
         </form>
 
         <p className="auth-switch">
-          Don't have an account? <Link to="/register">Register</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
     </div>
