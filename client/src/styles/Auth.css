@@ -1,0 +1,66 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 100px;
+}
+.auth-box {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #e6e6e6;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.auth-box label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+.req { color: #e94b4b; }
+.auth-box input,
+.auth-box select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.auth-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+.btn-dark {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.remember { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #555; }
+.remember input { width: auto; margin: 0; }
+.lost-pass { font-size: 14px; color: #333; text-decoration: none; }
+
+/* Register specific */
+.register-box { max-width: 720px; }
+.form-row { display: flex; gap: 20px; }
+.form-row .field { flex: 1; }
+.agree-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.agree-row input { width: auto; margin: 0; }
+.agree-row a { color: #333; font-weight: 600; }
+
+@media (max-width: 600px) {
+  .form-row { flex-direction: column; }
+  .auth-box { padding: 24px; }
+}
