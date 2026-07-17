@@ -8,12 +8,12 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Wishlist from "./pages/Wishlist";
 import Login from "./pages/Login";
-import About from "./pages/About";
+import Register from "./pages/Register";
+import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import NotFound from "./pages/NotFound";
-import Register from './pages/Register'
 
 export default function App() {
   return (
@@ -26,12 +26,12 @@ export default function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="*" element={<NotFound />} />
-        
       </Routes>
     </BrowserRouter>
   );

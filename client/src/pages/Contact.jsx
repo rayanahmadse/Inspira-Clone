@@ -1,78 +1,76 @@
-import { useState } from 'react'
-import '../styles/theme.css'
-import '../styles/Contact.css'
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import '../styles/Contact.css';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
+  const [form, setForm] = useState({
+    firstName: '', lastName: '', email: '', subject: '', message: '',
+  });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // No backend — just simulate sending
-    console.log('Contact form submitted:', form)
-    setSent(true)
-    setForm({ name: '', email: '', message: '' })
-  }
+    e.preventDefault();
+    console.log('contact form:', form);
+    alert('Message sent (demo only, no backend).');
+  };
 
   return (
-    <div className="contact-page">
-      <div className="contact-hero">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you.</p>
+    <>
+      <div className="page-header">
+        <div className="container">
+          <h1>Contact</h1>
+          <div className="breadcrumb">
+            <Link to="/">Home</Link> <span>&gt;</span> <span>Contact</span>
+          </div>
+        </div>
       </div>
 
-      <div className="contact-wrap">
-        <div className="contact-info">
-          <h2>Get in Touch</h2>
-          <p><strong>Address:</strong> 123 Fashion Street, Lahore, Pakistan</p>
-          <p><strong>Email:</strong> support@inspira.com</p>
-          <p><strong>Phone:</strong> +92 300 1234567</p>
-          <p><strong>Hours:</strong> Mon – Sat, 10am – 7pm</p>
+      <div className="contact-map">
+        <iframe
+          title="location"
+          src="https://www.google.com/maps?q=Collins%20St%2C%20West%20Melbourne%20VIC%203003%2C%20Australia&output=embed"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          loading="lazy"
+        />
+      </div>
+
+      <div className="contact-body container">
+        <div className="contact-form-col">
+          <h2>TELL US YOUR PROJECT</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-row">
+              <input name="firstName" placeholder="First Name*" value={form.firstName} onChange={handleChange} required />
+              <input name="lastName" placeholder="Last Name*" value={form.lastName} onChange={handleChange} required />
+            </div>
+            <div className="form-row">
+              <input type="email" name="email" placeholder="Email*" value={form.email} onChange={handleChange} required />
+              <input name="subject" placeholder="Subject*" value={form.subject} onChange={handleChange} required />
+            </div>
+            <textarea name="message" placeholder="Message" rows="6" value={form.message} onChange={handleChange} />
+            <button type="submit" className="btn-send">SEND EMAIL</button>
+          </form>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
-          {sent && <p className="contact-success">Thanks! Your message has been sent.</p>}
-
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Your name"
-            required
-          />
-
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="you@example.com"
-            required
-          />
-
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="How can we help?"
-            required
-          />
-
-          <button type="submit" className="contact-btn">Send Message</button>
-        </form>
+        <div className="contact-info-col">
+          <h2>CONTACT-US</h2>
+          <p>
+            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+            lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram
+            anteposuerit litterarum formas human.
+          </p>
+          <hr />
+          <div className="info-line"><span>📍</span> Address : No 40 Baria Sreet 133/2 NewYork City</div>
+          <div className="info-line"><span>📞</span> info@example.com</div>
+          <div className="info-line"><span>✉️</span> 0(1234) 567 890</div>
+          <h3>Working Hours</h3>
+          <p>Monday – Saturday: 08AM – 22PM</p>
+        </div>
       </div>
-    </div>
-  )
+    </>
+  );
 }
