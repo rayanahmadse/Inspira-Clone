@@ -1,0 +1,58 @@
+.inspira-footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 48px 24px 40px;
+  text-align: center;
+}
+
+.inspira-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.inspira-footer-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+
+.inspira-footer-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.inspira-footer-logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.inspira-footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.inspira-footer-social a {
+  color: #fff;
+  text-decoration: none;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.inspira-footer-social a:hover {
+  border-color: #dd524a;
+  color: #dd524a;
+}

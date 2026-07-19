@@ -1,0 +1,121 @@
+.inspira-product-card {
+  position: relative;
+  text-align: center;
+  background: #f5f5f5;
+  transition: box-shadow 0.25s;
+}
+
+.inspira-product-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+}
+
+.inspira-product-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.inspira-badge-new {
+  background: #57c5a0;
+  color: #fff;
+}
+
+.inspira-badge-sale {
+  background: #dd524a;
+  color: #fff;
+}
+
+.inspira-product-img-wrap {
+  display: flex;
+  height: 240px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.inspira-product-img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.35s;
+  mix-blend-mode: multiply;
+}
+
+.inspira-product-card:hover .inspira-product-img-wrap img {
+  transform: scale(1.06);
+}
+
+.inspira-product-info {
+  padding: 16px 16px 20px;
+}
+
+.inspira-product-info h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
+  margin: 0 0 8px;
+}
+
+.inspira-product-rating {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.inspira-star-filled {
+  color: #dd524a;
+}
+
+.inspira-star-empty {
+  color: #ddd;
+}
+
+.inspira-product-price {
+  margin-bottom: 14px;
+}
+
+.inspira-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.inspira-old-price {
+  font-size: 13px;
+  color: #bbb;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.inspira-btn-cart {
+  width: calc(100% - 20px);
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.inspira-btn-cart:hover {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}

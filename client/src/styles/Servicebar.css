@@ -1,0 +1,51 @@
+.inspira-service-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.inspira-service-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 20px;
+  background: #f2f4f6;
+}
+
+.inspira-svc-svg {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  color: #333;
+}
+
+.inspira-service-item h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+}
+
+.inspira-service-item p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .inspira-service-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .inspira-service-bar {
+    grid-template-columns: 1fr;
+  }
+}

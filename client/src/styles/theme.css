@@ -1,0 +1,75 @@
+/* Shared theme variables — matches Inspira Home Version 05 reference
+   Coral/red accent used for links, active nav, sale badges, "Continue Reading"
+   Import this file first in any page CSS that needs the theme colors. */
+
+:root {
+  --inspira-accent: #dd524a;
+  --inspira-dark: #222222;
+  --inspira-text: #555555;
+  --inspira-muted: #888888;
+  --inspira-bg-light: #f6f4f1;
+  --inspira-border: #ececec;
+  --inspira-star: #f5a623;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--inspira-dark);
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--inspira-muted);
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+.btn-pill {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid var(--inspira-dark);
+  border-radius: 30px;
+  background: transparent;
+  color: var(--inspira-dark);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-pill:hover {
+  background: var(--inspira-dark);
+  color: #fff;
+}
+
+.link-accent {
+  color: var(--inspira-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.link-accent:hover {
+  text-decoration: underline;
+}

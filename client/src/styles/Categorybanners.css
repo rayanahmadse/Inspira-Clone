@@ -1,0 +1,98 @@
+.inspira-cat-section {
+  margin: 48px 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* ── outer flex: tall-left + right-block ── */
+.inspira-cat-grid {
+  display: flex;
+  gap: 4px;
+}
+
+/* ── Left tall panel (portrait woman with bag) ── */
+.inspira-cat-tall {
+  width: 22%;
+  flex-shrink: 0;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  background: #f0ede8;
+}
+
+.inspira-cat-tall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ── Right column ── */
+.inspira-cat-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* Top row: two equal cells */
+.inspira-cat-row {
+  display: flex;
+  gap: 4px;
+}
+
+/* Each top cell — show image at natural size */
+.inspira-cat-item {
+  flex: 1;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  background: #f5f4f2;
+  min-width: 0;
+}
+
+.inspira-cat-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bottom banner — spans the full right-column width */
+.inspira-cat-full {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  background: #f5f4f2;
+  width: 100%;
+}
+
+.inspira-cat-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .inspira-cat-grid {
+    flex-direction: column;
+  }
+
+  .inspira-cat-tall {
+    width: 100%;
+    height: 360px;
+  }
+
+  .inspira-cat-tall img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .inspira-cat-row {
+    flex-direction: column;
+  }
+}

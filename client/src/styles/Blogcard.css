@@ -1,0 +1,60 @@
+.inspira-blog-card {
+  overflow: hidden;
+}
+
+.inspira-blog-img-wrap {
+  display: block;
+  overflow: hidden;
+}
+
+.inspira-blog-img-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s;
+}
+
+.inspira-blog-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.inspira-blog-info {
+  padding: 18px 4px 4px;
+}
+
+.inspira-blog-info h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.inspira-blog-date {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.inspira-blog-excerpt {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.inspira-read-more {
+  font-size: 12px;
+  color: #dd524a;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.inspira-read-more:hover {
+  text-decoration: underline;
+}
